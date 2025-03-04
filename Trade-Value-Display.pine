@@ -4,12 +4,14 @@
 //@version=6
 indicator("Trade Value", overlay=true)
 
-tradeValue = volume * close
+// Using ohlc4 (open+high+low+close)/4 for a more comprehensive average price calculation
+// ohlc4 is a built-in variable that equals (open + high + low + close) / 4
+tradeValue = volume * ohlc4
 
 plot(
      tradeValue,
      title   = "Trade Value",
      format  = format.volume,
-     color   = color.new(color.red, 100),
+     color   = color.new(color.red, 100),  // 100% transparent
      style   = plot.style_line,
      linewidth = 1)
