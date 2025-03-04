@@ -2,7 +2,7 @@
 // © yuli-kamakura
 
 //@version=6
-indicator("Trade Value", overlay=false)
+indicator("Trade Value", overlay=true)
 
 tradeValue = volume * close
 
