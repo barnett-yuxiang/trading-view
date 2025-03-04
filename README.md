@@ -11,6 +11,7 @@ A simple indicator that calculates and displays the trade value (volume × close
 - File: `Trade-Value-Display.pine`
 - Function: Calculates trade value for each candlestick
 - Display: Visible in the Data Window only
+- Implementation: Uses transparency (100% transparent color) to hide the indicator on chart while maintaining Data Window functionality
 
 ## How to Use
 
@@ -18,6 +19,13 @@ A simple indicator that calculates and displays the trade value (volume × close
 2. Copy the content of the desired .pine file
 3. Paste into the Pine Editor
 4. Click "Add to Chart" to apply the indicator
+5. To view the indicator values, open the Data Window (View → Data Window or press D)
+
+## Technical Notes
+
+- Pine Script version: v6
+- The overlay parameter is set to `true` to avoid creating an additional pane below the main chart
+- Transparency techniques are used to maintain Data Window functionality without visual chart elements
 
 ## Future Development
 
