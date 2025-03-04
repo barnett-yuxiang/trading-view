@@ -1,0 +1,15 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © yuli-kamakura
+
+//@version=6
+indicator("Trade Value", overlay=false)
+
+tradeValue = volume * close
+
+plot(
+     tradeValue,
+     title   = "Trade Value",
+     format  = format.volume,
+     color   = color.new(color.red, 100),
+     style   = plot.style_line,
+     linewidth = 1)
